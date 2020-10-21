@@ -12,7 +12,7 @@ services:
     build: ./api_getway/DayscoolAPI
     ports:
       - "5000:5000"
-    mem_limit: 200m
+    #mem_limit: 200m
   ms_user_db:
     container_name: ms_user_db
     image: "mysql:latest"
@@ -29,7 +29,7 @@ services:
       MYSQL_PASSWORD: 153486
       MYSQL_ROOT_PASSWORD: 153486
       MYSQL_ROOT_HOST: "%"
-    mem_limit: 200m
+    #mem_limit: 200m
 
   ms_user:
     container_name: ms_user
@@ -38,12 +38,12 @@ services:
       - ms_user_db
     ports:
       - "10100:10100"
-    mem_limit: 200m
+    #mem_limit: 200m
 
   ms_cursos:
     container_name: ms_cursos
     build: ./back-end/ms_cursos
-    mem_limit: 200m
+    #mem_limit: 200m
 
   ms_authentication:
     container_name: ms_authentication
@@ -52,7 +52,7 @@ services:
       - ms_user_db
     ports:
       - "10200:10200"
-    mem_limit: 200m
+    #mem_limit: 200m
 
 networks:
   default:
