@@ -1,0 +1,22 @@
+[package]
+name = "hello-rocker"
+version = "0.1.0"
+authors = ["draco1006 <mbarragani@unal.edu.co>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.5"
+mysqlclient-sys = "0.2.4"
+diesel = { version = "1.4.5", features = ["chrono"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.57"
+chrono = "0.4"
+base64-serde = "0.6.1"
+base64= "0.13.0"
+
+[dependencies.rocket_contrib]
+version = "0.4.5"
+default-features = false
+features = ["diesel_mysql_pool","json",]

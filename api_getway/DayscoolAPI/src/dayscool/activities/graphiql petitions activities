@@ -1,0 +1,145 @@
+----------------- Actividades ----------------------
+query{
+        getAllCategorias{
+          idCurso
+          Nombre
+          Fecha
+          FechaEntrega
+          Descripcion
+          Archivo
+        }
+      }
+query{
+  getCategoriaById(id:"5f75068ceef5ccb5f939b96e"){
+	idCurso
+    Nombre
+    Fecha
+    FechaEntrega
+    Descripcion
+    Archivo
+  }
+}
+
+query{
+  getCategoriaByCurso(idCurso:"5f75068ceef5"){
+  	idCurso
+    Nombre
+    Fecha
+    FechaEntrega
+    Descripcion
+    Archivo
+  }
+}
+
+mutation{
+    createActividad(actividad: {
+        id: "5f75068cfff5ccb5f939b98b",
+        idCurso: "5f75068ceef7",
+        Nombre: "Tarea Graphql",
+        Fecha: "2020/09/03",
+        FechaEntrega: "2020/10/03",
+        Descripcion: "Tarea Graph Aun Mas Dificil",
+        Archivo: "Tarea02.pdf"
+    }){
+  	  idCurso
+    Nombre
+    Fecha
+    FechaEntrega
+    Descripcion
+    Archivo
+  }
+}
+
+mutation{
+    updateActividad(id: "5f75068cfff5ccb5f939b98b", actividad: {
+			id:"5f75068cfff5ccb5f939b98b",
+      idCurso:"5f75068ceef7",
+      Nombre:"Tarea Graphql ultimo",
+      Fecha:"2020/09/03",
+      FechaEntrega:"2020/10/03",
+      Descripcion:"Tarea Graph 3",
+      Archivo:"TareaGraphUltimo.pdf"
+    }){
+  	  idCurso
+    Nombre
+    Fecha
+    FechaEntrega
+    Descripcion
+    Archivo
+  }
+}
+
+mutation{
+  deleteActividad(id:"5f750692eef5ccb5f939b96a")  
+}
+
+
+----------------- Entregas ----------------------
+query{
+  getAllEntregas{
+      idUsuario
+      idActividad
+      Nombre
+      Fecha
+      Descripcion
+      Archivo
+      Calificacion
+  }
+}
+query{
+  getEntregaById(id:"5f750692eef5ccb5f939b96c"){
+  	idUsuario
+      idActividad
+      Nombre
+      Fecha
+      Descripcion
+      Archivo
+      Calificacion
+  }
+}
+mutation{
+    createEntrega(Entrega: {
+		id: "5f750692eef5ccb5f939b96c",
+    idUsuario: "3",
+    idActividad: "3",
+    Nombre: "SolucionTarea03",
+    Fecha: "2020/10/03",
+    Descripcion: "Si estuvo aun mas dificil!",
+    Archivo: "SolucionTarea03.pdf",
+    Calificacion: "3.5"
+    }){
+  	  idUsuario
+      idActividad
+      Nombre
+      Fecha
+      Descripcion
+      Archivo
+      Calificacion
+  }
+}
+
+mutation{
+    updateEntrega(id: "5f750692eef5ccb5f939b98c", entrega: {
+			id:"5f750692eef5ccb5f939b98c",
+      idUsuario:"4",
+      idActividad:"4",
+      Nombre:"SolucionTarea04",
+      Fecha:"2020/10/03",
+      Descripcion:"Si estuvo aun mas dificil!  asdasdasd",
+      Archivo:"SolucionTarea04sdnakjdasd.pdf",
+      Calificacion:"3.7"
+    }){
+  	    	  idUsuario
+      idActividad
+      Nombre
+      Fecha
+      Descripcion
+      Archivo
+      Calificacion
+  }
+}
+
+mutation{
+  deleteEntrega(id:"5f750692eef5ccb5f939b96a")  
+}
+

@@ -1,0 +1,2 @@
+[global.databases]
+dbMsql = {url = "mysql://admin:g2KUj8qZgqEtw9k@database-1.cdgydkog5xbm.us-east-1.rds.amazonaws.com:3306/testing"}

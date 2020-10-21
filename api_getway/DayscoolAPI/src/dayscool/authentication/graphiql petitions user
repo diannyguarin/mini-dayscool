@@ -1,0 +1,36 @@
+mutation{
+    createUser(user: {
+      	username: "hola2"
+        mail: "kolmant2@mail.com",
+        birthDate: "2007-12-03T10:15:30",
+        career: "engineering",
+        role: "student",
+        name: "Nicolas",
+        password: "1234"
+    }){
+  	  id  
+  }
+}
+
+query{
+  getUserById(id:2){
+  	name
+    username
+  }
+}
+
+mutation{
+  updateUser(id:1, user:{
+    username: "pepito15",
+    mail: "ozai17@mail.com",
+    birthDate: "1998-11-09",
+    career: "engineering",
+    role: "student",
+    name: "Pepito",
+    password: "1234"
+  }){
+  	name
+    username
+  }
+}
+
