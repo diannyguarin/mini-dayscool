@@ -37,7 +37,7 @@ services:
     depends_on:
       - ms_user_db
     ports:
-      - "8081:8081"
+      - "10100:10100"
     mem_limit: 200m
 
   ms_cursos:
@@ -51,7 +51,7 @@ services:
     depends_on:
       - ms_user_db
     ports:
-      - "8082:8082"
+      - "10200:10200"
     mem_limit: 200m
 
 networks:
