@@ -1,0 +1,8 @@
+com\example\demo\entity\User.class
+com\example\demo\controller\Rest.class
+com\example\demo\service\UserServiceImpl.class
+com\example\demo\service\UserService.class
+com\example\demo\dao\UserDAO.class
+com\example\demo\dao\UserDAOImpl.class
+com\example\demo\controller\UserRestController.class
+com\example\demo\MsAuthenticationApplication.class
