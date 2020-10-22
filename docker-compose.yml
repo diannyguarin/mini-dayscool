@@ -1,4 +1,4 @@
-version: "3.5"
+version: "2.1"
 services:
   # web_front:
   #   container_name: web_front
